@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.DEBUG)
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-username = os.getenv('METEOMATICS_USERNAME')
+username = os.getenv('METEOMATICS_USERNAME') 
 password = os.getenv('METEOMATICS_PASSWORD')
 
 
