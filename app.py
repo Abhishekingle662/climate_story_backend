@@ -15,7 +15,7 @@ import os
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://climate-story-nasa-space-apps.vercel.app/"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 username = os.getenv.getenv('METEOMATICS_USERNAME')
 password = os.getenv.getenv('METEOMATICS_PASSWORD')
@@ -157,7 +157,6 @@ def get_weather():
 
 
 
-if __name__ == '__main__':
-    app.run(debug=False)  # Set debug to False for production
-
- 
+# Run the Flask app
+if __name__ == "__main__":
+    app.run()
